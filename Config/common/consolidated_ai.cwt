@@ -333,6 +333,8 @@ ai_equipment_design_group = {
 			### The equipment archetype or equipment type that the variant must use to match.
 			type = <equipment>
 
+			type = <dup_archetypes>
+
 			### The matching requirements on individual module slots.
 			modules = {
 				### A slot can be assigned a module category. Any other module category fails the match. When designing an equipment variant, the latest available will be favored.
@@ -370,6 +372,18 @@ ai_equipment_design_group = {
 					### Optionally, for upgrading existing equipment to a this design, you can require that this slot must have a better module in order to use this design. Example upgrade > current. Alternatively, you can require that it must use exactly the same module that is already on the existing equipment. Example upgrade = current.
 					## cardinality = 0..1
 					upgrade = current
+				}
+			}
+
+			## cardinality = 0..1
+			upgrades = {
+				## cardinality = 0..4
+				<upgrade> = int
+
+				## cardinality = 0..4
+				<upgrade> = {
+					enum[base_factor] = float
+					alias_name[modifier_rule] = alias_match_left[modifier_rule]
 				}
 			}
 		}
