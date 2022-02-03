@@ -333,8 +333,6 @@ ai_equipment_design_group = {
 			### The equipment archetype or equipment type that the variant must use to match.
 			type = <equipment>
 
-			type = <dup_archetypes>
-
 			### The matching requirements on individual module slots.
 			modules = {
 				### A slot can be assigned a module category. Any other module category fails the match. When designing an equipment variant, the latest available will be favored.

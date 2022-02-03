@@ -147,10 +147,6 @@ equipment = {
 		## cardinality = 0..1
 		archetype = <equipment.archetype_equip>
 
-		### Which archetype duplicate equipment this equipment inherits from.
-		## cardinality = 0..1
-		archetype = <dup_archetypes>
-
 		## cardinality = 0..1
 		### Which equipment is parent to this equipment (i.e. which does it supercede).
 		parent = <equipment.regular_equip>
