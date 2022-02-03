@@ -598,6 +598,14 @@ alias[trigger:has_deployed_air_force_size] = {
 	type = enum[air_units]
 }
 
+### Check if this character is an army leader
+## scope = character
+alias[trigger:is_army_leader] = bool
+
+### Check if this character is a navy leader
+## scope = character
+alias[trigger:is_navy_leader] = bool
+
 ### Check what terrain is in combat.
 ## scope = combat
 alias[trigger:is_fighting_in_terrain] = <terrain>
@@ -777,7 +785,9 @@ alias[trigger:custom_trigger_tooltip] = {
 
 ### Checks for amount of equipment stored.
 ## scope = country
-alias[trigger:has_equipment] = { <equipment> = int_variable_field }
+alias[trigger:has_equipment] = {
+	<equipment> = int_variable_field
+}
 
 ### Check amount of total factories.
 ## scope = country
