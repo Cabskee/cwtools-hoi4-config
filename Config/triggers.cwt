@@ -599,11 +599,11 @@ alias[trigger:has_deployed_air_force_size] = {
 }
 
 ### Check if this character is an army leader
-## scope = character
+## scope = { character unit_leader }
 alias[trigger:is_army_leader] = bool
 
 ### Check if this character is a navy leader
-## scope = character
+## scope = { character unit_leader}
 alias[trigger:is_navy_leader] = bool
 
 ### Check what terrain is in combat.

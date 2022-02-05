@@ -32,6 +32,10 @@ types = {
 unit = {
 	### 3D map asset.
 	sprite = scalar
+
+	## cardinality = 0..1
+	abbreviation = scalar
+
 	#enum[unit_sprites]
 	subtype[land_unit] = {
 		need = {
@@ -69,7 +73,7 @@ unit = {
 
 		## cardinality = 0..1
 		### division designer group
-		group = localisation_inline
+		group = enum[unit_groups]
 
 		### unit type
 		type = {
@@ -127,6 +131,10 @@ unit = {
 		## cardinality = 0..1
 		### Blocks adding same unit types to a template.
 		same_support_type = <unit.support_unit>
+
+		## cardinality = 0..1
+		### Blocks adding same unit types to a template.
+		same_support_type = enum[unit_types]
 	}
 
 	subtype[ship_unit] = {
@@ -338,10 +346,12 @@ enums = {
 		train
 	}
 	enum[land_units] = {
+		amphibious
 		anti_air
 		anti_tank
 		armor
 		artillery
+		flame
 		infantry
 		mechanized
 		motorized
