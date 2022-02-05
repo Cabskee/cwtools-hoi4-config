@@ -44,21 +44,21 @@ character = {
 	portraits = {
 		## cardinality = 0..1
 		civilian = {
-			large = scalar
+			large = filepath
 		}
 		## cardinality = 0..1
 		army = {
 			## cardinality = 0..1
-			large = scalar
+			large = filepath
 			## cardinality = 0..1
-			small = scalar
+			small = filepath
 		}
 		## cardinality = 0..1
 		navy = {
 			## cardinality = 0..1
-			large = scalar
+			large = filepath
 			## cardinality = 0..1
-			small = scalar
+			small = filepath
 		}
 	}
 

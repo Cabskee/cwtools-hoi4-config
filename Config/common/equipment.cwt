@@ -1,9 +1,13 @@
 types = {
 	type[equipment] = {
 		skip_root_key = equipments
+		skip_root_key = duplicate_archetypes
 		path = "game/common/units/equipment"
 		subtype[archetype_equip] = {
 			is_archetype = yes
+		}
+		subtype[dupe_archetype_equip] = {
+			for_each = { }
 		}
 		subtype[regular_equip] = {
 			## cardinality = 0..1
@@ -135,6 +139,23 @@ equipment = {
 		}
 	}
 
+	subtype[dupe_archetype_equip] = {
+		## cardinality = 0..1
+		for_each = {
+			variant_name = {
+				find_and_replace = {
+					## cardinality = 2..2
+					scalar
+				}
+			}
+
+			## cardinality = 0..1
+			hardness = {
+				set = float
+			}
+		}
+	}
+
 	subtype[air_equip] = {
 		## cardinality = 0..1
 		carrier_capable = yes
@@ -146,6 +167,10 @@ equipment = {
 		### Which archetype equipment this equipment inherits from.
 		## cardinality = 0..1
 		archetype = <equipment.archetype_equip>
+
+		### Which duplicated archetype equipment this equipment inherits from.
+		## cardinality = 0..1
+		archetype = <equipment.dupe_archetype_equip>
 
 		## cardinality = 0..1
 		### Which equipment is parent to this equipment (i.e. which does it supercede).
