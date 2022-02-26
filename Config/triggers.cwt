@@ -9,6 +9,22 @@ alias[trigger:state] = scope[state]
 ## scope = state
 alias[trigger:state] = <state>
 
+### Checks status of the character
+## scope = any
+alias[trigger:<character>] = {
+	## cardinality = 0..1
+	is_country_leader = bool
+
+	## cardinality = 0..1
+	is_unit_leader = bool
+
+	## cardinality = 0..1
+	is_advisor = bool
+
+	## cardinality = 0..1
+	is_character_slot = enum[character_slot]
+}
+
 ### A conditional trigger.
 ## scope = any
 alias[trigger:if] = {

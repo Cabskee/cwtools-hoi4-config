@@ -158,7 +158,7 @@ character = {
 
 		traits = {
 			## cardinality = 0..inf
-			<country_leader_trait>
+			<unit_leader_trait>
 		}
 
 		## cardinality = 0..1
@@ -182,7 +182,7 @@ character = {
 
 		traits = {
 			## cardinality = 0..inf
-			<country_leader_trait>
+			<unit_leader_trait>
 		}
 
 		## cardinality = 0..1
@@ -206,7 +206,7 @@ character = {
 
 		traits = {
 			## cardinality = 0..inf
-			<country_leader_trait>
+			<unit_leader_trait>
 		}
 
 		## cardinality = 0..1
